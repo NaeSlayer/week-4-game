@@ -1,11 +1,12 @@
-container {
+body {
 	
-	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-	background-image: url(../images/45degree_fabric.png) !important;
+	font-family: 'Ultra', serif;
+	background-image: url(../images/45degree_fabric.png);
 }
 
 jumbotron {
-  border-radius: 25px;
+  width: 80%;
+  border-radius: 20px;
 }
 
 h1 {
@@ -24,33 +25,40 @@ p {
   
 }
 .instructions {
-    border: 5px solid black;
+    border: 3px solid grey;
+    border-radius: 15px;
     background: rgb(75, 100, 245);
    
 }
 .game-stats,
-.instructions {
-  width: 90%;
+.instructions,
+.crystals {
+  width: 80%;
   margin: 25px 100px;
 }
 
-.number-div {
-  border: 5px solid black;
+.number {
+  border: 3px solid grey;
+  border-radius: 15px;
   background: rgb(27, 105, 44);
   height: 100%;
-  height: 150px;
+  height: 170px;
 }
-.win-or-lose-div {
-  border: 5px solid black;
+.win-or-lose {
+  border: 3px solid grey;
+  border-radius: 15px;
   background: rgb(13, 167, 121);
-  height: 150px;
+  height: 170px;
 
 }
-.score-div {
-  border: 5px, solid, black;
+.score {
+  border: 3px solid grey;
+  border-radius: 15px;
   background: rgb(242, 245, 75);
-  height: 150px;
+  height: 170px;
 }
 .crystals {
   margin-top: 20px;
+  border: 3px solid grey;
+  border-radius: 15px;
 }
