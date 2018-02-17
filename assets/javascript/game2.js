@@ -22,27 +22,10 @@ function updateWinOrLose(){
 
 function startNewGame() {
     counter = 0;
-    // var imageCrystalArray = [];
-    var imageCrystal;
     targetNumber = Math.floor(Math.random() * (120-19) + 19);
     $("#number-to-guess").text(targetNumber);
-    $("#crystals").empty();
     setTimeout(updateScore, 3000);
     setTimeout(updateWinOrLose, 3000);
-    for (var i = 0, k = 0; i < imgSrc.length, k < 4; i++ , k++) {
-        imageCrystal = $("<img>");
-        imageCrystal.addClass("crystal-image");
-        imageCrystal.attr("src", imgSrc[i]);
-        numberOptions[k] = (Math.floor(Math.random() * 12) + 1);
-        imageCrystal.attr("data-crystalvalue", numberOptions[k]);
-        // imageCrystalArray.push(imageCrystal);
-       $("#crystals").append(imageCrystal);
-    }
-    
-    // $.each(imageCrystalArray, function(crystal){
-    //     $("#crystals").append(crystal);
-    // });
-    
 }
 
 
@@ -57,18 +40,18 @@ var imgSrc = ["assets/images/crystal1.jpg", "assets/images/crystal2.png", "asset
 // this creates a new div for the crystals
 
 
-// for (var i = 0, k = 0; i < imgSrc.length, k < 4; i++, k++) {
-// var imageCrystal = $("<img>");
-// imageCrystal.addClass("crystal-image");
-// imageCrystal.attr("src", imgSrc[i]);
-// numberOptions[k] = (Math.floor(Math.random() * 12) + 1);
-// imageCrystal.attr("data-crystalvalue", numberOptions[k]);
-// $("#crystals").append(imageCrystal);
-// }
+for (var i = 0, k = 0; i < imgSrc.length, k < 4; i++, k++) {
+var imageCrystal = $("<img>");
+imageCrystal.addClass("crystal-image");
+imageCrystal.attr("src", imgSrc[i]);
+numberOptions[k] = (Math.floor(Math.random() * 12) + 1);
+imageCrystal.attr("data-crystalvalue", numberOptions[k]);
+$("#crystals").append(imageCrystal);
+}
 
 
 // this onclick event adds up the score
-    $("#crystals").on("click", ".crystal-image" ,function() {
+$(".crystal-image").on("click", function() {
     
     var crystalValue = ($(this).attr("data-crystalvalue"));
     

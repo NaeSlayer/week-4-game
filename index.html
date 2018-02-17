@@ -3,6 +3,7 @@
 
 <head>
     <title>Crystal Collector Game</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Ultra" rel="stylesheet">
@@ -10,11 +11,11 @@
 
 <body>
     <container>
-        <div class="jumbotron">
+        <div class="jumbotron header">
             <h1>Crystals Collector</h1>
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-9 instructions">
                 <p>You will be given a random number at the start of the game.</p>
                 <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
                 <p>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</p>
@@ -22,30 +23,34 @@
                 <p>The random number to guess and the values of each crystal will change each time the game starts.</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-5">
+        <div class="row game-stats">
+            <div class="col-md-3 number-div">
                 <p>Number to Guess</p>
                 <p id="number-to-guess"></p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-1"></div>
+            <div class="col-md-2 score-div">
+                <p>Your score is:</p>
+                <p id="score"></p>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-2 win-or-lose-div">
                 <p id="win-or-lose"></p>
                 <p>Wins</p>
                 <p id="wins"></p>
                 <p>Losses</p>
                 <p id="losses"></p>
             </div>
+
         </div>
         <div class="row">
-            <div id="crystals" class="col-md-10"></div>
+            <div id="crystals" class="col-md-10 crystals"></div>
          
-            <div class="col-md-5">
-                <p>Your score is:</p>
-                <p id="score"></p>
-            </div>
+            
         </div>
     
     
-    <!-- this div will hold the images of crystals -->
+   
     
 
     </container>
